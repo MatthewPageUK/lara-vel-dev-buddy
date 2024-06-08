@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/home/matt/laravel10/laravel-bitwise-enums/phpunit.xml.dist" tests="56" assertions="79" errors="0" failures="0" skipped="0" time="0.513109">
+    <testsuite name="MatthewPageUK Bitty Enums Test Suite" tests="56" assertions="79" errors="0" failures="0" skipped="0" time="0.513109">
+      <testsuite name="Tests\Validator\ContractTest" file="tests/Validator/ContractTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.151635">
+        <testcase name="it throws exception if enum does not implement BittyEnum contract" file="tests/Validator/ContractTest.php::it throws exception if enum does not implement BittyEnum contract" class="Tests\Validator\ContractTest" classname="Tests.Validator.ContractTest" assertions="1" time="0.151635"/>
+      </testsuite>
+      <testsuite name="Tests\Validator\ChoiceTest" file="tests/Validator/ChoiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.009527">
+        <testcase name="it throws exception if choice is a different enum" file="tests/Validator/ChoiceTest.php::it throws exception if choice is a different enum" class="Tests\Validator\ChoiceTest" classname="Tests.Validator.ChoiceTest" assertions="1" time="0.009527"/>
+      </testsuite>
+      <testsuite name="Tests\Container\HasTest" file="tests/Container/HasTest.php" tests="3" assertions="16" errors="0" failures="0" skipped="0" time="0.016915">
+        <testcase name="it can check if the container has any of the values" file="tests/Container/HasTest.php::it can check if the container has any of the values" class="Tests\Container\HasTest" classname="Tests.Container.HasTest" assertions="6" time="0.006670"/>
+        <testcase name="it can check if the container has a value" file="tests/Container/HasTest.php::it can check if the container has a value" class="Tests\Container\HasTest" classname="Tests.Container.HasTest" assertions="4" time="0.005390"/>
+        <testcase name="it can check if the container has all the values" file="tests/Container/HasTest.php::it can check if the container has all the values" class="Tests\Container\HasTest" classname="Tests.Container.HasTest" assertions="6" time="0.004855"/>
+      </testsuite>
+      <testsuite name="Tests\Scope\HasTest" file="tests/Scope/HasTest.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="0.016003">
+        <testcase name="it throws exception if attribute is cast to a different class" file="tests/Scope/HasTest.php::it throws exception if attribute is cast to a different class" class="Tests\Scope\HasTest" classname="Tests.Scope.HasTest" assertions="1" time="0.006210"/>
+        <testcase name="it throws exception if targeting non cast attribute" file="tests/Scope/HasTest.php::it throws exception if targeting non cast attribute" class="Tests\Scope\HasTest" classname="Tests.Scope.HasTest" assertions="1" time="0.004535"/>
+        <testcase name="it can scope the whereBittyEnumHas query" file="tests/Scope/HasTest.php::it can scope the whereBittyEnumHas query" class="Tests\Scope\HasTest" classname="Tests.Scope.HasTest" assertions="2" time="0.005258"/>
+      </testsuite>
+      <testsuite name="Tests\Scope\HasAnyTest" file="tests/Scope/HasAnyTest.php" tests="5" assertions="5" errors="0" failures="0" skipped="0" time="0.021951">
+        <testcase name="it throws exception if attribute is cast to a different class" file="tests/Scope/HasAnyTest.php::it throws exception if attribute is cast to a different class" class="Tests\Scope\HasAnyTest" classname="Tests.Scope.HasAnyTest" assertions="1" time="0.005191"/>
+        <testcase name="it returns none if no values passed" file="tests/Scope/HasAnyTest.php::it returns none if no values passed" class="Tests\Scope\HasAnyTest" classname="Tests.Scope.HasAnyTest" assertions="1" time="0.004214"/>
+        <testcase name="it can accept an array of values" file="tests/Scope/HasAnyTest.php::it can accept an array of values" class="Tests\Scope\HasAnyTest" classname="Tests.Scope.HasAnyTest" assertions="1" time="0.003974"/>
+        <testcase name="it throws exception if targeting non cast attribute" file="tests/Scope/HasAnyTest.php::it throws exception if targeting non cast attribute" class="Tests\Scope\HasAnyTest" classname="Tests.Scope.HasAnyTest" assertions="1" time="0.004469"/>
+        <testcase name="it can scope the whereBittyEnumHasAny query" file="tests/Scope/HasAnyTest.php::it can scope the whereBittyEnumHasAny query" class="Tests\Scope\HasAnyTest" classname="Tests.Scope.HasAnyTest" assertions="1" time="0.004104"/>
+      </testsuite>
+      <testsuite name="Tests\Scope\HasAllTest" file="tests/Scope/HasAllTest.php" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.019600">
+        <testcase name="it can accept an array of values" file="tests/Scope/HasAllTest.php::it can accept an array of values" class="Tests\Scope\HasAllTest" classname="Tests.Scope.HasAllTest" assertions="1" time="0.005102"/>
+        <testcase name="it throws exception if targeting non cast attribute" file="tests/Scope/HasAllTest.php::it throws exception if targeting non cast attribute" class="Tests\Scope\HasAllTest" classname="Tests.Scope.HasAllTest" assertions="1" time="0.004168"/>
+        <testcase name="it throws exception if attribute is cast to a different class" file="tests/Scope/HasAllTest.php::it throws exception if attribute is cast to a different class" class="Tests\Scope\HasAllTest" classname="Tests.Scope.HasAllTest" assertions="1" time="0.006120"/>
+        <testcase name="it can scope the whereBittyEnumHasAll query" file="tests/Scope/HasAllTest.php::it can scope the whereBittyEnumHasAll query" class="Tests\Scope\HasAllTest" classname="Tests.Scope.HasAllTest" assertions="1" time="0.004210"/>
+      </testsuite>
+      <testsuite name="Tests\Container\SetTest" file="tests/Container/SetTest.php" tests="8" assertions="8" errors="0" failures="0" skipped="0" time="0.033753">
+        <testcase name="it can set all values" file="tests/Container/SetTest.php::it can set all values" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.006177"/>
+        <testcase name="it can set a value" file="tests/Container/SetTest.php::it can set a value" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.004184"/>
+        <testcase name="it throws an exception if wrong enum type is passed in array" file="tests/Container/SetTest.php::it throws an exception if wrong enum type is passed in array" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.004400"/>
+        <testcase name="it can chain multiple sets" file="tests/Container/SetTest.php::it can chain multiple sets" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.003820"/>
+        <testcase name="it can accept an array of enums" file="tests/Container/SetTest.php::it can accept an array of enums" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.003991"/>
+        <testcase name="it throws exception if wrong enum type is set" file="tests/Container/SetTest.php::it throws exception if wrong enum type is set" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.003813"/>
+        <testcase name="it throws exception if wrong enum type is passed in BittyContainer" file="tests/Container/SetTest.php::it throws exception if wrong enum type is passed in BittyContainer" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.003716"/>
+        <testcase name="it can accept another BittyContainer" file="tests/Container/SetTest.php::it can accept another BittyContainer" class="Tests\Container\SetTest" classname="Tests.Container.SetTest" assertions="1" time="0.003651"/>
+      </testsuite>
+      <testsuite name="Tests\Container\CreatingTest" file="tests/Container/CreatingTest.php" tests="5" assertions="8" errors="0" failures="0" skipped="0" time="0.020836">
+        <testcase name="it can create a new container" file="tests/Container/CreatingTest.php::it can create a new container" class="Tests\Container\CreatingTest" classname="Tests.Container.CreatingTest" assertions="2" time="0.005892"/>
+        <testcase name="it can create a new container with no class" file="tests/Container/CreatingTest.php::it can create a new container with no class" class="Tests\Container\CreatingTest" classname="Tests.Container.CreatingTest" assertions="2" time="0.003533"/>
+        <testcase name="it can set container class after creation" file="tests/Container/CreatingTest.php::it can set container class after creation" class="Tests\Container\CreatingTest" classname="Tests.Container.CreatingTest" assertions="2" time="0.003581"/>
+        <testcase name="it throws an exception if the container enum class is invalid" file="tests/Container/CreatingTest.php::it throws an exception if the container enum class is invalid" class="Tests\Container\CreatingTest" classname="Tests.Container.CreatingTest" assertions="1" time="0.004223"/>
+        <testcase name="it registers bindings for BittyContainer contract" file="tests/Container/CreatingTest.php::it registers bindings for BittyContainer contract" class="Tests\Container\CreatingTest" classname="Tests.Container.CreatingTest" assertions="1" time="0.003608"/>
+      </testsuite>
+      <testsuite name="Tests\Scope\DoesntHaveAnyTest" file="tests/Scope/DoesntHaveAnyTest.php" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.016707">
+        <testcase name="it throws exception if attribute is cast to a different class" file="tests/Scope/DoesntHaveAnyTest.php::it throws exception if attribute is cast to a different class" class="Tests\Scope\DoesntHaveAnyTest" classname="Tests.Scope.DoesntHaveAnyTest" assertions="1" time="0.004885"/>
+        <testcase name="it can scope the whereBittyEnumDoesntHaveAny query" file="tests/Scope/DoesntHaveAnyTest.php::it can scope the whereBittyEnumDoesntHaveAny query" class="Tests\Scope\DoesntHaveAnyTest" classname="Tests.Scope.DoesntHaveAnyTest" assertions="1" time="0.004126"/>
+        <testcase name="it can accept an array of values" file="tests/Scope/DoesntHaveAnyTest.php::it can accept an array of values" class="Tests\Scope\DoesntHaveAnyTest" classname="Tests.Scope.DoesntHaveAnyTest" assertions="1" time="0.004100"/>
+        <testcase name="it throws exception if targeting non cast attribute" file="tests/Scope/DoesntHaveAnyTest.php::it throws exception if targeting non cast attribute" class="Tests\Scope\DoesntHaveAnyTest" classname="Tests.Scope.DoesntHaveAnyTest" assertions="1" time="0.003596"/>
+      </testsuite>
+      <testsuite name="Tests\Cast\FromTest" file="tests/Cast/FromTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.004901">
+        <testcase name="it can cast from a model attribute" file="tests/Cast/FromTest.php::it can cast from a model attribute" class="Tests\Cast\FromTest" classname="Tests.Cast.FromTest" assertions="2" time="0.004901"/>
+      </testsuite>
+      <testsuite name="Tests\Cast\ToTest" file="tests/Cast/ToTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004894">
+        <testcase name="it can cast to a model attribute" file="tests/Cast/ToTest.php::it can cast to a model attribute" class="Tests\Cast\ToTest" classname="Tests.Cast.ToTest" assertions="1" time="0.004894"/>
+      </testsuite>
+      <testsuite name="Tests\Validator\PassTest" file="tests/Validator/PassTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004374">
+        <testcase name="it passes a good enum class" file="tests/Validator/PassTest.php::it passes a good enum class" class="Tests\Validator\PassTest" classname="Tests.Validator.PassTest" assertions="1" time="0.004374"/>
+      </testsuite>
+      <testsuite name="Tests\Container\IteratorTest" file="tests/Container/IteratorTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004778">
+        <testcase name="it can be iterated over by a foreach" file="tests/Container/IteratorTest.php::it can be iterated over by a foreach" class="Tests\Container\IteratorTest" classname="Tests.Container.IteratorTest" assertions="1" time="0.004778"/>
+      </testsuite>
+      <testsuite name="Tests\Validator\ValuesTest" file="tests/Validator/ValuesTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="0.013584">
+        <testcase name="it throws exception if enum values do not start at one" file="tests/Validator/ValuesTest.php::it throws exception if enum values do not start at one" class="Tests\Validator\ValuesTest" classname="Tests.Validator.ValuesTest" assertions="1" time="0.005176"/>
+        <testcase name="it throws exception if enum contains non power of two values" file="tests/Validator/ValuesTest.php::it throws exception if enum contains non power of two values" class="Tests\Validator\ValuesTest" classname="Tests.Validator.ValuesTest" assertions="1" time="0.003996"/>
+        <testcase name="it throws exception if enum values are out of order" file="tests/Validator/ValuesTest.php::it throws exception if enum values are out of order" class="Tests\Validator\ValuesTest" classname="Tests.Validator.ValuesTest" assertions="1" time="0.004411"/>
+      </testsuite>
+      <testsuite name="Tests\Container\ClearTest" file="tests/Container/ClearTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004552">
+        <testcase name="it can clear the values" file="tests/Container/ClearTest.php::it can clear the values" class="Tests\Container\ClearTest" classname="Tests.Container.ClearTest" assertions="1" time="0.004552"/>
+      </testsuite>
+      <testsuite name="Tests\Container\GetChoicesTest" file="tests/Container/GetChoicesTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.004714">
+        <testcase name="it returns an array of enums from getChoices()" file="tests/Container/GetChoicesTest.php::it returns an array of enums from getChoices()" class="Tests\Container\GetChoicesTest" classname="Tests.Container.GetChoicesTest" assertions="1" time="0.004714"/>
+      </testsuite>
+      <testsuite name="Tests\ArchTest" file="tests/ArchTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.102526">
+        <testcase name="it will not use debugging functions" file="tests/ArchTest.php::it will not use debugging functions" class="Tests\ArchTest" classname="Tests.ArchTest" assertions="3" time="0.102526"/>
+      </testsuite>
+      <testsuite name="Tests\Container\UnsetTest" file="tests/Container/UnsetTest.php" tests="6" assertions="6" errors="0" failures="0" skipped="0" time="0.031082">
+        <testcase name="it throws exception if wrong enum type is passed in BittyContainer" file="tests/Container/UnsetTest.php::it throws exception if wrong enum type is passed in BittyContainer" class="Tests\Container\UnsetTest" classname="Tests.Container.UnsetTest" assertions="1" time="0.005952"/>
+        <testcase name="it throws exception if wrong enum type is unset" file="tests/Container/UnsetTest.php::it throws exception if wrong enum type is unset" class="Tests\Container\UnsetTest" classname="Tests.Container.UnsetTest" assertions="1" time="0.004296"/>
+        <testcase name="it throws an exception if wrong enum type is passed in array" file="tests/Container/UnsetTest.php::it throws an exception if wrong enum type is passed in array" class="Tests\Container\UnsetTest" classname="Tests.Container.UnsetTest" assertions="1" time="0.004604"/>
+        <testcase name="it can accept an array of enums" file="tests/Container/UnsetTest.php::it can accept an array of enums" class="Tests\Container\UnsetTest" classname="Tests.Container.UnsetTest" assertions="1" time="0.006285"/>
+        <testcase name="it can unset a value" file="tests/Container/UnsetTest.php::it can unset a value" class="Tests\Container\UnsetTest" classname="Tests.Container.UnsetTest" assertions="1" time="0.005176"/>
+        <testcase name="it can accept another BittyContainer" file="tests/Container/UnsetTest.php::it can accept another BittyContainer" class="Tests\Container\UnsetTest" classname="Tests.Container.UnsetTest" assertions="1" time="0.004770"/>
+      </testsuite>
+      <testsuite name="Tests\Scope\DoesntHaveTest" file="tests/Scope/DoesntHaveTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="0.016374">
+        <testcase name="it can scope the whereBittyEnumDoesntHave query" file="tests/Scope/DoesntHaveTest.php::it can scope the whereBittyEnumDoesntHave query" class="Tests\Scope\DoesntHaveTest" classname="Tests.Scope.DoesntHaveTest" assertions="1" time="0.006977"/>
+        <testcase name="it throws exception if targeting non cast attribute" file="tests/Scope/DoesntHaveTest.php::it throws exception if targeting non cast attribute" class="Tests\Scope\DoesntHaveTest" classname="Tests.Scope.DoesntHaveTest" assertions="1" time="0.005308"/>
+        <testcase name="it throws exception if attribute is cast to a different class" file="tests/Scope/DoesntHaveTest.php::it throws exception if attribute is cast to a different class" class="Tests\Scope\DoesntHaveTest" classname="Tests.Scope.DoesntHaveTest" assertions="1" time="0.004089"/>
+      </testsuite>
+      <testsuite name="Tests\Validator\CasesTest" file="tests/Validator/CasesTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="0.014401">
+        <testcase name="it validates case name" file="tests/Validator/CasesTest.php::it validates case name" class="Tests\Validator\CasesTest" classname="Tests.Validator.CasesTest" assertions="4" time="0.005990"/>
+        <testcase name="it throws exception if enum has too many cases (16 bit)" file="tests/Validator/CasesTest.php::it throws exception if enum has too many cases (16 bit)" class="Tests\Validator\CasesTest" classname="Tests.Validator.CasesTest" assertions="1" time="0.004434"/>
+        <testcase name="it throws exception if enum has no cases" file="tests/Validator/CasesTest.php::it throws exception if enum has no cases" class="Tests\Validator\CasesTest" classname="Tests.Validator.CasesTest" assertions="1" time="0.003976"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
