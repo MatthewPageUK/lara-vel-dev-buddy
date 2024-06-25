@@ -1,12 +1,12 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.routes.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
         {{-- Main Page --}}
 
         <x-lvdb::card>
-            <x-slot:title>Details</x-slot:title>
+            <x-slot name="title">Details</x-slot>
 
             <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 {{ $route->uri }}
@@ -68,7 +68,7 @@
         </x-lvdb::card>
 
         <x-lvdb::card>
-            <x-slot:title>To Do</x-slot:title>
+            <x-slot name="title">To Do</x-slot>
             <p>Link to controller</p>
             <p>Examine controller to map parameters to models or types</p>
             <p>Middleware table</p>
@@ -76,6 +76,6 @@
             <p>...</p>
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 
 </x-lvdb::layout>

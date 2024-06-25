@@ -1,14 +1,14 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.commands.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
 
         <x-lvdb::file-info-slide-over :file="$file" />
 
         {{-- Details --}}
         <x-lvdb::card>
-            <x-slot:title>Details</x-slot:title>
+            <x-slot name="title">Details</x-slot>
 
             <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 {{ $reflection->getName() }}
@@ -39,7 +39,7 @@
 
         {{-- Schedule --}}
         <x-lvdb::card>
-            <x-slot:title>Schedule</x-slot:title>
+            <x-slot name="title">Schedule</x-slot>
             @foreach ($schedule as $event)
                 <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                     {{ $event->command }}
@@ -67,7 +67,7 @@
         <x-lvdb::methods-card :reflection="$reflection" :methods="$methods" :methodSignatures="$methodSignatures" :methodTraits="$methodTraits" />
 
         <x-lvdb::card>
-            <x-slot:title>To Do</x-slot:title>
+            <x-slot name="title">To Do</x-slot>
             <p>Methods</p>
             <p>Traits</p>
             <p>Is scheduled</p>
@@ -75,5 +75,5 @@
             <p>What does it do?</p>
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>

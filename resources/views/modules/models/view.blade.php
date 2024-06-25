@@ -1,8 +1,8 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.models.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
         {{-- Main Page --}}
 
         {{-- File info slide over --}}
@@ -11,7 +11,7 @@
         </div>
 
         <x-lvdb::card>
-            <x-slot:title>Details</x-slot:title>
+            <x-slot name="title">Details</x-slot>
 
             <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 {{ $reflection->getName() }}
@@ -30,7 +30,7 @@
 
         {{-- Casts --}}
         <x-lvdb::card>
-            <x-slot:title>Casts</x-slot:title>
+            <x-slot name="title">Casts</x-slot>
             <table class="w-full">
                 <tr class="text-zinc-500 text-left border-zinc-500 border-b">
                     <th class="py-1 pr-4 font-light">Column</th>
@@ -46,7 +46,7 @@
         </x-lvdb::card>
 
         <x-lvdb::card>
-            <x-slot:title>Scopes</x-slot:title>
+            <x-slot name="title">Scopes</x-slot>
             <div class="flex flex-wrap gap-2">
                 @foreach ($scopes as $method)
 
@@ -80,7 +80,7 @@
 
         {{-- Fields --}}
         <x-lvdb::card>
-            <x-slot:title>Table Fields</x-slot:title>
+            <x-slot name="title">Table Fields</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>Field</x-lvdb::th>
@@ -110,7 +110,7 @@
 
         {{-- Relationships --}}
         <x-lvdb::card>
-            <x-slot:title>Relationships</x-slot:title>
+            <x-slot name="title">Relationships</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>Method</x-lvdb::th>
@@ -129,7 +129,7 @@
 
         {{-- Migrations --}}
         <x-lvdb::card>
-            <x-slot:title>Migrations</x-slot:title>
+            <x-slot name="title">Migrations</x-slot>
             <x-lvdb::migrations.table :migrations="$migrations" />
         </x-lvdb::collapse-card>
 
@@ -223,6 +223,6 @@
 
 
 
-    </x-slot:page>
+    </x-slot>
 
 </x-lvdb::layout>

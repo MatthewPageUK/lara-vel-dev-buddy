@@ -1,12 +1,12 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.middleware.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
 
         {{-- Global Middleware --}}
         <x-lvdb::card>
-            <x-slot:title>Global Middleware</x-slot:title>
+            <x-slot name="title">Global Middleware</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>Middleware</x-lvdb::th>
@@ -27,7 +27,7 @@
 
         {{-- Middleware Groups --}}
         <x-lvdb::card>
-            <x-slot:title>Middleware Groups</x-slot:title>
+            <x-slot name="title">Middleware Groups</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>Group</x-lvdb::th>
@@ -50,7 +50,7 @@
 
         {{-- Middleware Alias --}}
         <x-lvdb::card>
-            <x-slot:title>Middleware Aliases</x-slot:title>
+            <x-slot name="title">Middleware Aliases</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>Alias</x-lvdb::th>
@@ -65,5 +65,5 @@
             </x-lvdb::table>
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>

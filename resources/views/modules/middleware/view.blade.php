@@ -1,14 +1,14 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.middleware.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
 
         <x-lvdb::file-info-slide-over :file="$file" />
 
         {{-- Details --}}
         <x-lvdb::card>
-            <x-slot:title>Details</x-slot:title>
+            <x-slot name="title">Details</x-slot>
             <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 {{ $reflection->getName() }}
             </div>
@@ -23,7 +23,7 @@
 
         {{-- Methods --}}
         <x-lvdb::card>
-            <x-slot:title>Methods</x-slot:title>
+            <x-slot name="title">Methods</x-slot>
 
             <div class="grid gap-2 flex-1" x-data="{ open: false }">
                 @foreach ($methods as $method)
@@ -68,7 +68,7 @@
         </x-lvdb::card>
 
         <x-lvdb::card>
-            <x-slot:title>To Do</x-slot:title>
+            <x-slot name="title">To Do</x-slot>
             <p>Methods</p>
             <p>Where is it applied</p>
             <p>What does it do?</p>
@@ -77,6 +77,6 @@
             <p>Group middleware</p>
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>
 

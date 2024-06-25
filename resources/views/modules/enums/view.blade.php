@@ -1,8 +1,8 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.enums.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
         {{-- Main Page --}}
 
         {{-- File info slide over --}}
@@ -11,7 +11,7 @@
         </div>
 
         <x-lvdb::card>
-            <x-slot:title>Details</x-slot:title>
+            <x-slot name="title">Details</x-slot>
 
             <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 {{ $reflection->getName() }}
@@ -28,7 +28,7 @@
 
 
     <x-lvdb::card>
-        <x-slot:title>Cases</x-slot:title>
+        <x-slot name="title">Cases</x-slot>
 
         <div class="grid gap-2 flex-1" x-data="{ open: false }">
             @foreach ($cases as $case)
@@ -79,7 +79,7 @@
 
     @if (count($references) > 0)
         <x-lvdb::card>
-            <x-slot:title>Used in</x-slot:title>
+            <x-slot name="title">Used in</x-slot>
             <div class="flex flex-wrap gap-2">
                 @foreach ($references as $reference)
                     <div class="w-full flex items-center gap-2 py-1 px-4 rounded-xl bg-sky-800 text-white dark:bg-zinc-600">
@@ -92,7 +92,7 @@
 
     @if (count($interfaces) > 0)
         <x-lvdb::card>
-            <x-slot:title>Interfaces</x-slot:title>
+            <x-slot name="title">Interfaces</x-slot>
             <div class="flex flex-wrap gap-2">
                 @foreach ($interfaces as $interface)
                     <div class="w-full flex items-center gap-2 py-1 px-4 rounded-xl bg-sky-800 text-white dark:bg-zinc-600">
@@ -105,7 +105,7 @@
 
     @if (count($traits) > 0)
         <x-lvdb::card>
-            <x-slot:title>Traits</x-slot:title>
+            <x-slot name="title">Traits</x-slot>
             <div class="flex flex-wrap gap-2">
                 @foreach ($traits as $trait)
                     <div class="w-full flex items-center gap-2 py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
@@ -117,7 +117,7 @@
     @endif
 
     <x-lvdb::card>
-        <x-slot:title>Methods</x-slot:title>
+        <x-slot name="title">Methods</x-slot>
         <div class="grid gap-2 flex-1" x-data="{ open: false }">
             @foreach ($methods as $method)
                 <div
@@ -160,5 +160,5 @@
         </div>
     </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>

@@ -1,14 +1,14 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.controllers.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
 
         <x-lvdb::file-info-slide-over :file="$file" />
 
         {{-- Details --}}
         <x-lvdb::card>
-            <x-slot:title>Details</x-slot:title>
+            <x-slot name="title">Details</x-slot>
 
             <div class="py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 {{ $reflection->getName() }}
@@ -24,7 +24,7 @@
 
         {{-- Routes --}}
         <x-lvdb::card>
-            <x-slot:title>Routes</x-slot:title>
+            <x-slot name="title">Routes</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>URI</x-lvdb::th>
@@ -61,7 +61,7 @@
 
         {{-- Views --}}
         <x-lvdb::card>
-            <x-slot:title>Views</x-slot:title>
+            <x-slot name="title">Views</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>View</x-lvdb::th>
@@ -80,7 +80,7 @@
         <x-lvdb::methods-card :reflection="$reflection" :methods="$methods" :methodSignatures="$methodSignatures" :methodTraits="$methodTraits" />
 
         <x-lvdb::card>
-            <x-slot:title>To Do</x-slot:title>
+            <x-slot name="title">To Do</x-slot>
             <p>Public methods</p>
             <p>Routes</p>
             <p>Views returned</p>
@@ -93,5 +93,5 @@
             <p>Validation</p>
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>

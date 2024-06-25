@@ -1,10 +1,10 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.enums.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
         <x-lvdb::card>
-            <x-slot:title>About Enums</x-slot:title>
+            <x-slot name="title">About Enums</x-slot>
             <ul>
                 <li><a href="https://www.php.net/manual/en/language.enumerations.php" target="_blank" class="text-sky-800 hover:text-sky-500 dark:text-blue-300 dark:hover:text-blue-500">PHP Enumerations</a></li>
                 <li><a href="https://laravel.com/docs/10.x/routing#implicit-enum-binding" target="_blank" class="text-sky-800 hover:text-sky-500 dark:text-blue-300 dark:hover:text-blue-500">Laravel implicit enum route binding</a></li>
@@ -17,5 +17,5 @@
         {{-- <p class="mt-64">Testing...</p>
         <x-lvdb::enum-maker /> --}}
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>

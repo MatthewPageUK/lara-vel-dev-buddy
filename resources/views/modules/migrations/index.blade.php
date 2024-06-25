@@ -1,8 +1,8 @@
 <x-lvdb::layout :title="$title">
-    {{-- <x-slot:menu> --}}
+    {{-- <x-slot name="menu"> --}}
         {{-- @include('lvdb::modules.factories.menu') --}}
-    {{-- </x-slot:menu> --}}
-    <x-slot:page>
+    {{-- </x-slot> --}}
+    <x-slot name="page">
 
         <x-lvdb::card>
 
@@ -10,5 +10,5 @@
 
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>

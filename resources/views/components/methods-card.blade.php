@@ -2,7 +2,7 @@
 
 {{-- Methods --}}
 <x-lvdb::card>
-    <x-slot:title>Methods</x-slot:title>
+    <x-slot name="title">Methods</x-slot>
 
     <div class="grid gap-2 flex-1" x-data="{
         open: false,

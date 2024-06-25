@@ -1,6 +1,6 @@
 
     <x-lvdb::card>
-        <x-slot:title>Create a new Enum</x-slot:title>
+        <x-slot name="title">Create a new Enum</x-slot>
         <div
             x-init="getCode(); $watch('enumcases, enumName, returnType, enumNamespace', value => getCode())"
             x-data="{

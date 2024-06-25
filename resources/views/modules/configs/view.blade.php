@@ -1,12 +1,12 @@
 <x-lvdb::layout :title="$title">
-    <x-slot:menu>
+    <x-slot name="menu">
         @include('lvdb::modules.configs.menu')
-    </x-slot:menu>
-    <x-slot:page>
+    </x-slot>
+    <x-slot name="page">
 
         {{-- Details --}}
         <x-lvdb::card>
-            <x-slot:title>Config</x-slot:title>
+            <x-slot name="title">Config</x-slot>
             {{-- Linked path --}}
             <div class="flex py-1 px-4 rounded-xl bg-sky-800 text-white font-medium dark:bg-zinc-600">
                 @php($baseKey = null)
@@ -32,7 +32,7 @@
 
         {{-- Config values --}}
         <x-lvdb::card>
-            <x-slot:title>Values</x-slot:title>
+            <x-slot name="title">Values</x-slot>
             <x-lvdb::table>
                 <x-lvdb::tr>
                     <x-lvdb::th>Key</x-lvdb::th>
@@ -48,12 +48,12 @@
         </x-lvdb::card>
 
         <x-lvdb::card>
-            <x-slot:title>To Do</x-slot:title>
+            <x-slot name="title">To Do</x-slot>
             <p>Find usage of values...</p>
             <p>xxx</p>
             <p>xxx</p>
             <p>xxxx</p>
         </x-lvdb::card>
 
-    </x-slot:page>
+    </x-slot>
 </x-lvdb::layout>
