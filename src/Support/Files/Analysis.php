@@ -2,7 +2,6 @@
 
 namespace MatthewPageUK\LaraVelDevBuddy\Support\Files;
 
-use Illuminate\Support\Number;
 use stdClass;
 
 class Analysis
@@ -21,7 +20,8 @@ class Analysis
         $file->lines = file($file->name);
         $file->contents = file_get_contents($file->name);
         $file->lineCount = count($file->lines);
-        $file->size = Number::fileSize(filesize($file->name), 2);
+        // $file->size = Number::fileSize(filesize($file->name), 2);
+        $file->size = filesize($file->name);
         $file->longestLine = max(array_map('strlen', $file->lines));
 
         // Chat GPT
