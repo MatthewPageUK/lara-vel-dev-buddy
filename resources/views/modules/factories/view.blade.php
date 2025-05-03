@@ -35,6 +35,29 @@
 
         </x-lvdb::card>
 
+        <x-lvdb::collapse-card title="State Methods" :count="count($stateMethods)">
+            <table>
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Return Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($stateMethods as $method)
+                        <tr>
+                            <td class="pr-4">{{ $method->isPublic() ? 'Public' : '' }}</td>
+                            <td class="pr-4">{{ $method->name }}</td>
+                            <td class="pr-4">{{ $method->class }}</td>
+                            <td class="pr-4">{{ $method->getReturnType() }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </x-lvdb::collapse-card>
+
         <x-lvdb::card>
             <x-slot name="title">To Do</x-slot>
             <p>Show output - json, enum</p>

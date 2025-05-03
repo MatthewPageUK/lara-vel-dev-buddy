@@ -59,6 +59,7 @@ class FactoriesController extends Controller
                 'class' => $this->inferModelFromFactory($instance),
                 'url' => Modules\Models\Module::getRoute('show', $this->inferModelFromFactory($instance)),
             ],
+            'stateMethods' => Support\Factories\StateMethods\Discovery::getFromFactory($reflection),
             // 'methods' => collect($reflection->getMethods())->sort(),
             // 'methodSignatures' => collect($reflection->getMethods())
             //     ->mapWithKeys(fn (ReflectionMethod $method) => [
