@@ -1,0 +1,59 @@
+{
+    "name": "matthewpageuk/lara-vel-dev-buddy",
+    "description": "This package is a helpful dev buddy for your Laravel apps.",
+    "keywords": [
+        "Matthew Page",
+        "laravel",
+        "lara-vel-dev-buddy"
+    ],
+    "homepage": "https://github.com/matthewpageuk/lara-vel-dev-buddy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MatthewPage",
+            "email": "work@mjp.co",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.8",
+        "dragonmantank/cron-expression": "^3.3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MatthewPageUK\\LaraVelDevBuddy\\": "src/",
+            "MatthewPageUK\\LaraVelDevBuddy\\Database\\Factories\\": "database/factories/",
+            "Tests\\": "tests/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MatthewPageUK\\LaraVelDevBuddy\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "scripts": {
+
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MatthewPageUK\\LaraVelDevBuddy\\LaraVelDevBuddyServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
